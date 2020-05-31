@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	</style>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	body{
+		background-image:url('1.jpg');
+		width: 50%;
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		position:relative;
+
+	}
+	header{
+		width:160%;
+		position: absolute;
+		top: 10%;
+	    left: -30%;
+		
+	}
+</style>
+<body>
+	<header><div class="card w-50 m-auto text-center">
+  <div class="card-header text-white bg-danger">LOVE CALCULATOR</div>
+  <div class="card-body m-auto text-center">
+  	<form class="form-inline">
+  		<div class="form-group"><input type="text" name="" class="form-control" placeholder="your Name" id="uname"></div>
+  		<div><span class="pl-4 pr-4">  + </span></div>
+  		<div class="form-group"><input type="text" name=""  class="form-control" placeholder="LOVE Name" id="lname"></div>
+  		
+  	</form><br>
+  	<div class="w-75 m-auto"><button  class="btn btn-success w-50 " onclick="love()">click</button></div>
+  </div><br>
+  <div>
+  	<input type="text" name="" id="lovevalue" class="form-control text-center w-25 m-auto" placeholder="LOVE percentage"></div> <br>
+  <div class="card-footer">god bless your relationship</div>
+</div>
+</header>
+	<script type="text/javascript">
+		function love() {
+			var uname=document.getElementById('uname').value;
+			var lname=document.getElementById('lname').value;
+			if (uname=="") {
+					alert('please write your name');
+			}else if(uname.length<=2){alert('minimum length of name should be greater than 3');}
+			else if(!isNaN(uname)){
+				alert('numbers are not allowed')
+			}
+
+    	else if (lname=="") {
+					alert('please write your name');
+			}else if(lname.length<=2){alert('minimum length of name should be greater than 3');}
+			else if(!isNaN(lname)){
+				alert('numbers are not allowed')
+			}
+           else{
+		var love=Math.random() * 100;
+		love=Math.floor(love);
+		document.getElementById('lovevalue').value= love + "%";}
+		}
+	</script>
+
+</body>
+</html>
